@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  margin: 0 auto;
+  padding: 0rem;
+  text-align: center;
+}
+
+.jogos-em-alta{
+  background-image: url('/assets/bg-video-2.png');
+  background-position: center;
+  background-size: contain;
+}
+
+
+
+@layer components {
+  .smooth-enter {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .smooth-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
